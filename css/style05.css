@@ -19,10 +19,16 @@ a {
 
 img {
     max-width: 100%;        /* Evita qeu ocorra esse overflow, a img pcupa 100% do elemento pai  */
+    display: block; /* faz com que a imagem e comporte sempre como um bloco, ou seja, do inicio ao fim do conteiner */
 }
 
 li {
     list-style: none;       /*  */
+
+}
+
+p,h1,h2,h3 {
+    margin: 0px;
 
 }
 
@@ -81,9 +87,28 @@ li {
     border-radius: 4px;
 }
 
-.rodape {
-    background-color: #c49c9c;
+/*estilizaçao das vantagens */
+
+.vantagens {
+    background-color: #ffffff;
     padding: 40px;
+}
+
+.vantagens-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    padding: 20px;
+}
+.vantagens-item p {
+    grid-column: 2;
+}
+
+/*estilizaçao do rodape */
+.rodape {
+    background-color: #ffffff;
+    padding: 40px 0;
     text-align: center;
     width: 100%; /*faz com que o elemento atual fique 100% d tamnho do elemento pai (voce nao esta utiliando display) */
+    box-sizing: border-box;
 }
